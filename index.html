@@ -1,4 +1,6 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#020604"><meta name="description" content="SRB Digital — premium websites for modern businesses."><title>SRB Digital — Websites That Move</title><style>
+<!doctype html><html lang="en"><head>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#020604"><meta name="description" content="WingBait — professional websites for modern businesses."><link rel="icon" type="image/png" href="assets/wingbait-logo.png"><title>WingBait — Websites That Move</title><style>
 :root{--bg:#020604;--panel:#07110a;--text:#f5f7f4;--muted:#8d9990;--green:#59ff78;--line:rgba(102,255,126,.18);--soft:rgba(255,255,255,.08);--content:1180px;--gutter:clamp(16px,4vw,48px)}
 *{box-sizing:border-box;min-width:0}
 html{width:100%;max-width:100%;overflow-x:hidden;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -9,7 +11,7 @@ a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}
 .hero,.section,.cta,footer{width:100%;max-width:none;margin-inline:auto}
 .hero>*:not(.heroVisual),.sectionHead>div,.sectionHead>p,.valueGrid,.offer,.portfolio,.processGrid{max-width:var(--content);margin-inline:auto}
 .nav{position:sticky;top:12px;z-index:60;width:min(calc(100% - 24px),var(--content));margin:12px auto 0;padding:10px 12px;border:1px solid var(--line);border-radius:18px;background:rgba(3,8,4,.76);backdrop-filter:blur(24px);display:flex;align-items:center;gap:12px}
-.logo{font-weight:950;letter-spacing:.14em;font-size:14px;margin-right:auto;white-space:nowrap}.logo span{color:var(--green)}
+.logo{font-weight:950;letter-spacing:.14em;font-size:14px;margin-right:auto;white-space:nowrap}.logo img{display:block;width:auto;height:56px;max-width:170px;object-fit:contain;flex:0 0 auto;filter:none}.logo{overflow:visible;display:flex;align-items:center}.logo img{mix-blend-mode:normal}.logo span{color:var(--green)}
 .navlinks{display:flex;align-items:center;gap:4px}.navlinks a{padding:9px 11px;border-radius:11px;color:#a0aaa3;font-size:12px}.navlinks a:hover{color:#fff;background:rgba(89,255,120,.06)}
 .navcta{padding:10px 15px;border-radius:12px;background:var(--green);color:#031007;font-weight:900;font-size:12px}.menu{display:none;width:44px;height:42px;border:1px solid var(--soft);border-radius:13px;background:rgba(255,255,255,.035);color:#fff;font-size:22px}
 .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(30px,6vw,90px);min-height:760px;padding-top:90px;padding-bottom:60px;overflow:visible}
@@ -25,13 +27,13 @@ h1{font-size:clamp(54px,7vw,94px);line-height:.88;letter-spacing:-.075em;margin:
 .marquee{width:100%;border-block:1px solid var(--line);overflow:hidden;white-space:nowrap}.track{display:inline-flex;gap:40px;padding:17px max(16px,4vw);color:#667168;font-size:10px;letter-spacing:.18em;text-transform:uppercase;animation:marquee 30s linear infinite}.track b{color:#b6c0b8}@keyframes marquee{to{transform:translateX(-50%)}}
 .section{padding-top:clamp(80px,9vw,125px);padding-bottom:clamp(80px,9vw,125px)}.sectionHead{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,430px);align-items:end;gap:40px;margin-bottom:42px}.eyebrow{color:#728078;font-size:10px;letter-spacing:.2em;text-transform:uppercase}.sectionHead h2{font-size:clamp(40px,5.4vw,70px);line-height:.93;letter-spacing:-.065em;margin:10px 0 0}.sectionHead p{color:var(--muted);margin:0}
 .valueGrid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(280px,.7fr);gap:14px}.valueMain,.valueCard,.offerCopy,.priceBox{border:1px solid var(--line);border-radius:24px;background:rgba(7,17,10,.62);padding:clamp(24px,3vw,38px);position:relative;overflow:hidden}.valueMain h3{font-size:clamp(34px,4vw,56px);line-height:.98;letter-spacing:-.055em;max-width:600px;margin:15px 0}.valueMain p,.valueCard p,.offerCopy p{color:var(--muted)}.miniList{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:35px;max-width:600px}.mini{padding:15px;border:1px solid var(--soft);border-radius:15px;background:rgba(255,255,255,.025);font-size:12px;color:#aab5ac}.mini b{display:block;color:#eaf0eb;margin-bottom:4px}.valueSide{display:grid;gap:14px}.valueCard{min-height:0}.tinyIcon{width:52px;height:52px;border-radius:17px;border:1px solid var(--line);display:grid;place-items:center;color:var(--green);font-size:21px;margin-bottom:22px;background:rgba(98,255,123,.06)}.valueCard h4{font-size:22px;margin:0 0 8px}
-.offer{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);gap:14px}.offerCopy h2{font-size:clamp(40px,5vw,64px);line-height:.92;letter-spacing:-.065em;margin:10px 0 18px}.checks{display:grid;gap:10px;margin-top:25px}.checks span{color:#aeb9b1;font-size:12px}.checks span:before{content:"↗";color:var(--green);margin-right:9px}.priceBox{display:flex;flex-direction:column;justify-content:center}.price{font-size:clamp(60px,8vw,96px);line-height:.9;letter-spacing:-.075em;font-weight:900;margin:12px 0}.price small{font-size:15px;color:#8c988f;font-weight:600}.priceLine,.priceTotal{display:flex;justify-content:space-between;gap:15px}.priceLine{padding:13px 0;border-bottom:1px solid var(--soft);font-size:12px;color:#aab5ac}.priceLine b{color:#fff}.priceTotal{align-items:end;margin-top:24px}.priceTotal strong{font-size:14px}.priceTotal span{font-size:26px;color:var(--green);font-weight:900}.priceNote{margin-top:13px;color:#718077;font-size:10px;line-height:1.5}.priceBox[data-region="india"] .price{font-size:clamp(52px,7vw,82px)}
+.offer{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);gap:14px}.offerCopy h2{font-size:clamp(40px,5vw,64px);line-height:.92;letter-spacing:-.065em;margin:10px 0 18px}.checks{display:grid;gap:10px;margin-top:25px}.checks span{color:#aeb9b1;font-size:12px}.checks span:before{content:"↗";color:var(--green);margin-right:9px}.priceBox{display:flex;flex-direction:column;justify-content:center}.price{font-size:clamp(60px,8vw,96px);line-height:.9;letter-spacing:-.075em;font-weight:900;margin:12px 0}.price small{font-size:15px;color:#8c988f;font-weight:600}.priceLine,.priceTotal{display:flex;justify-content:space-between;gap:15px}.priceLine{padding:13px 0;border-bottom:1px solid var(--soft);font-size:12px;color:#aab5ac}.priceLine b{color:#fff}.priceTotal{align-items:end;margin-top:24px}.priceTotal strong{font-size:14px}.priceTotal span{font-size:26px;color:var(--green);font-weight:900}.priceNote{margin-top:13px;color:#718077;font-size:10px;line-height:1.5}.priceDelivery{margin-top:14px;padding-top:13px;border-top:1px solid var(--soft);display:grid;grid-template-columns:1fr auto;gap:2px 10px;align-items:center;font-size:11px;color:#9eaaa1}.priceDelivery b{color:#fff;font-size:12px}.priceDelivery small{grid-column:1/-1;color:#69766e;font-size:9px}.priceBox[data-region="india"] .price{font-size:clamp(52px,7vw,82px)}
 .portfolio{display:grid;grid-template-columns:1.25fr .875fr .875fr;gap:14px}.work{min-height:360px;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#071008;position:relative}.work:first-child{min-height:520px;grid-row:span 2}.mock{position:absolute;inset:0;background:radial-gradient(circle at 50% 40%,rgba(98,255,123,.16),transparent 45%),linear-gradient(145deg,#0b1c0f,#020603 65%);padding:28px}.mock:before{content:"";position:absolute;width:80%;height:65%;left:10%;top:18%;border:1px solid rgba(98,255,123,.18);border-radius:24px;transform:rotate(-7deg)}.mockUI{position:relative;z-index:1;width:75%;height:62%;margin:15% auto 0;border:1px solid rgba(98,255,123,.25);border-radius:18px;background:rgba(3,8,4,.78);padding:20px}.mockUI .big{font-size:30px;line-height:.95;letter-spacing:-.05em;max-width:250px;margin:18px 0}.mockUI .green{color:var(--green)}.mockUI .bar{height:7px;width:55%;background:rgba(255,255,255,.1);border-radius:99px;margin:8px 0}.work{display:block;color:inherit;text-decoration:none}.work:focus-visible{outline:2px solid var(--green);outline-offset:3px}.workLabel{position:absolute;left:22px;bottom:20px;right:22px;z-index:3}.workLabel b{font-size:17px}.workLabel span{display:block;color:#7f8c83;font-size:11px}
 .processGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.step{padding:25px;border-top:1px solid var(--line)}.stepNum{font-size:10px;color:var(--green);letter-spacing:.16em}.step h3{font-size:21px;margin:35px 0 8px}.step p{color:var(--muted);font-size:12px;margin:0}
 .cta{max-width:var(--content);margin:50px auto 120px;padding:75px 40px;border:1px solid var(--line);border-radius:32px;text-align:center;background:radial-gradient(circle at 50% 0%,rgba(98,255,123,.12),transparent 52%),rgba(5,14,7,.72)}.cta h2{font-size:clamp(42px,6vw,78px);line-height:.92;letter-spacing:-.07em;margin:8px auto 16px;max-width:850px}.cta p{color:var(--muted);max-width:580px;margin:0 auto 25px}footer{max-width:var(--content);display:flex;justify-content:space-between;gap:20px;padding-bottom:35px;color:#738078;font-size:11px}
 /* AI is viewport-fixed: it must never participate in page columns or create a right-side layout gap. */
 .ai{position:fixed;right:18px;bottom:max(18px,env(safe-area-inset-bottom));z-index:90;width:82px;height:82px;overflow:visible;touch-action:none}.aiOrb{position:absolute;right:0;bottom:0;width:76px;height:76px;border-radius:30px 34px 31px 27px;border:1px solid rgba(255,255,255,.2);background:linear-gradient(145deg,#f5f7f4,#c8d0c9 45%,#707d73);box-shadow:inset 8px 8px 15px rgba(255,255,255,.8),inset -12px -14px 24px rgba(20,30,22,.28),0 28px 60px rgba(0,0,0,.55),0 0 30px rgba(98,255,123,.1);cursor:grab;animation:aiFloat 5s ease-in-out infinite;touch-action:none;padding:0}.aiScreen{position:absolute;inset:13px;border-radius:23px;background:linear-gradient(160deg,#102519,#06120a);box-shadow:inset 0 0 18px rgba(98,255,123,.2);overflow:hidden}.aiEye{position:absolute;top:22px;width:14px;height:9px;border-radius:99px;background:#f2fff4;transform:translate(var(--look-x,0),var(--look-y,0));transition:transform .15s ease}.aiEye.l{left:13px}.aiEye.r{right:13px}.aiMouth{position:absolute;top:38px;left:50%;width:20px;height:8px;transform:translateX(-50%);border-radius:99px;background:#f2fff4}.aiEar{position:absolute;top:23px;width:7px;height:25px;border-radius:8px;background:#dfe6e0}.aiEar.l{left:-3px}.aiEar.r{right:-3px}.aiStatus{position:absolute;right:-2px;top:-3px;width:11px;height:11px;border-radius:50%;background:var(--green);box-shadow:0 0 14px var(--green)}@keyframes aiFloat{50%{transform:translateY(-6px)}}
-.aiBubble,.aiPanel{position:fixed;display:none;border:1px solid rgba(98,255,123,.2);background:rgba(3,9,5,.94);backdrop-filter:blur(22px);box-shadow:0 25px 70px rgba(0,0,0,.55);z-index:91}.aiBubble{padding:12px 14px;border-radius:16px;color:#c7d0ca;font-size:10px;line-height:1.5}.aiBubble.show{display:block}.aiBubble b{display:block;color:#fff;margin-bottom:4px}.aiPanel{border-radius:20px;max-height:calc(100dvh - 20px);overflow:auto}.aiPanel.open{display:block}.aiHead{display:flex;justify-content:space-between;align-items:center;padding:16px;border-bottom:1px solid var(--soft)}.aiHead b{display:block}.aiHead span{display:block;color:#7f8c83;font-size:10px;margin-top:2px}.aiClose{border:0;background:none;color:#fff;font-size:22px}.aiBody{padding:16px}.quick{display:grid;grid-template-columns:1fr 1fr;gap:8px}.quick button{padding:10px;border:1px solid var(--soft);border-radius:11px;background:rgba(255,255,255,.03);color:#dce4df;font-size:11px}.aiInput{display:flex;gap:7px;margin-top:12px}.aiInput input{min-width:0;flex:1;padding:11px;border:1px solid var(--soft);border-radius:11px;background:rgba(255,255,255,.04);color:#fff;outline:none}.aiInput button{width:42px;border:0;border-radius:11px;background:var(--green);color:#021006;font-weight:900}
+.aiBubble,.aiPanel{position:fixed;display:none;border:1px solid rgba(98,255,123,.2);background:rgba(3,9,5,.94);backdrop-filter:blur(22px);box-shadow:0 25px 70px rgba(0,0,0,.55);z-index:91}.aiBubble{padding:12px 14px;border-radius:16px;color:#c7d0ca;font-size:10px;line-height:1.5}.aiBubble.show{display:block}.aiBubble b{display:block;color:#fff;margin-bottom:4px}.aiPanel{border-radius:20px;max-height:calc(100dvh - 20px);overflow:auto}.aiPanel.open{display:block}.aiHead{display:flex;justify-content:space-between;align-items:center;padding:16px;border-bottom:1px solid var(--soft)}.aiHead b{display:block}.aiHead span{display:block;color:#7f8c83;font-size:10px;margin-top:2px}.aiClose{border:0;background:none;color:#fff;font-size:22px}.aiBody{padding:16px}.quick{display:grid;grid-template-columns:1fr 1fr;gap:8px}.quick button{padding:10px;border:1px solid var(--soft);border-radius:11px;background:rgba(255,255,255,.03);color:#dce4df;font-size:11px}.aiAction{flex:1;padding:9px;border:1px solid var(--soft);border-radius:10px;background:rgba(255,255,255,.03);color:#cfd8d2;font-size:10px}.aiInput{display:flex;gap:7px;margin-top:12px} .aiPrivacy{margin-top:7px;color:#647068;font-size:9px;line-height:1.4}.aiInput input{min-width:0;flex:1;padding:11px;border:1px solid var(--soft);border-radius:11px;background:rgba(255,255,255,.04);color:#fff;outline:none}.aiInput button{width:42px;border:0;border-radius:11px;background:var(--green);color:#021006;font-weight:900}.aiMsg{padding:8px 10px;border:1px solid var(--soft);border-radius:11px;font-size:11px;line-height:1.45;color:#dce5df;background:rgba(255,255,255,.025)}.aiMsg.bot{border-color:rgba(98,255,123,.16)}.aiMsg.user{background:rgba(98,255,123,.07);text-align:right}
 @media (max-width:1100px){:root{--gutter:32px}.hero{gap:35px}.heroVisual{height:500px}.processGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.portfolio{grid-template-columns:1fr 1fr}.work:first-child{grid-row:auto;min-height:430px}}
 @media (max-width:820px){:root{--gutter:24px}.navlinks,.navcta{display:none}.menu{display:grid;place-items:center}.nav.open .navlinks{display:flex;position:absolute;left:8px;right:8px;top:58px;flex-direction:column;align-items:stretch;padding:8px;border:1px solid var(--line);border-radius:15px;background:rgba(2,7,3,.97);backdrop-filter:blur(22px)}.nav.open .navlinks a{width:100%}.hero{display:flex;flex-direction:column;align-items:stretch;gap:0;min-height:0;padding-top:70px;padding-bottom:45px}.hero>div:first-child{max-width:720px;margin-inline:auto}.heroVisual{height:390px;margin-top:8px}.sectionHead{grid-template-columns:1fr;gap:16px}.valueGrid,.offer{grid-template-columns:1fr}.valueSide{grid-template-columns:1fr 1fr}.portfolio{grid-template-columns:1fr 1fr}.work,.work:first-child{min-height:390px}.cta{margin-inline:var(--gutter);width:auto}.heroVisual:before{width:360px;height:360px}.ribbons{transform:scale(.72) rotate(-14deg)}}
 @media (max-width:600px){:root{--gutter:16px}.nav{width:calc(100% - 16px);margin-top:10px}.hero{padding-top:58px;padding-bottom:30px}.kicker{max-width:100%;font-size:9px;letter-spacing:.09em}.hero h1{font-size:clamp(44px,13vw,60px);max-width:100%;line-height:.9;margin:19px 0 20px}.hero p{font-size:15px;line-height:1.68}.actions{display:grid;grid-template-columns:1fr;gap:9px;margin:24px 0 18px}.actions .btn{width:100%;min-height:54px}.trust{gap:7px 14px;font-size:10px}.heroVisual{height:320px;margin-top:5px;overflow:visible}.orbit{width:330px;height:125px}.orbit.o2{width:370px;height:145px}.ribbons{width:390px;height:390px;transform:scale(.54) rotate(-14deg)}.webCore{width:235px;height:170px;transform:scale(.68) perspective(800px) rotateX(10deg) rotateY(-12deg)}.floatTag{max-width:140px;padding:8px 9px;font-size:9px}.floatTag b{font-size:10px}.tag1{left:0;top:5%}.tag2{right:0;bottom:12%}.tag3{display:none}.section{padding-top:75px;padding-bottom:75px}.sectionHead{margin-bottom:28px}.sectionHead h2{font-size:clamp(38px,11vw,52px)}.sectionHead p{font-size:14px}.miniList{grid-template-columns:1fr}.valueSide{grid-template-columns:1fr}.valueMain,.valueCard,.offerCopy,.priceBox{padding:22px;border-radius:20px}.portfolio{grid-template-columns:1fr}.work,.work:first-child{min-height:360px}.processGrid{grid-template-columns:1fr}.step{padding:22px 0}.step h3{margin-top:26px}.cta{padding:48px 20px;border-radius:24px;margin-top:25px;margin-bottom:75px}.cta h2{font-size:clamp(40px,11vw,56px)}footer{flex-direction:column;padding-bottom:28px}.ai{right:10px;bottom:max(10px,env(safe-area-inset-bottom));width:70px;height:70px}.aiOrb{width:64px;height:64px;border-radius:24px}.aiScreen{inset:11px;border-radius:19px}.aiEye{top:19px;width:12px;height:8px}.aiEye.l{left:11px}.aiEye.r{right:11px}.aiMouth{top:33px;width:18px}.aiEar{top:20px;height:22px}.aiBubble{max-width:230px;font-size:10px}.quick{grid-template-columns:1fr}.cta .btn{width:100%}}
@@ -92,7 +94,7 @@ h1{font-size:clamp(54px,7vw,94px);line-height:.88;letter-spacing:-.075em;margin:
 <div class="bgGlow glowA"></div><div class="bgGlow glowB"></div>
 
 <header class="nav" id="nav">
-  <a class="logo" href="#top"><span>SRB</span> DIGITAL</a>
+  <a class="logo" href="#top" aria-label="WingBait home"><img src="assets/wingbait-logo.png" alt="WingBait logo" width="165" height="128"></a>
   <nav class="navlinks">
     <a href="#why">Why websites</a><a href="#offer">Offer</a><a href="#work">Work</a><a href="#samples">Samples</a><a href="#process">Process</a>
   </nav>
@@ -106,7 +108,7 @@ h1{font-size:clamp(54px,7vw,94px);line-height:.88;letter-spacing:-.075em;margin:
     <div class="kicker"><i></i> Website studio for modern businesses</div>
     <h1>Websites that <span class="hAccent">move</span> your business.</h1>
     <p>A focused, premium website offer built around one thing: making your business look credible, explain its value fast, and turn attention into action.</p>
-    <div class="actions"><a class="btn primary" href="#offer">Build my website →</a><a class="btn secondary" href="#work">See the work</a></div>
+    <div class="actions"><a class="btn primary" href="#offer" id="heroBuildBtn">Build my website →</a><a class="btn secondary" href="#work">See the work</a></div>
     <div class="trust"><span>✦ <b>Conversion-minded</b></span><span>✦ <b>Mobile-first</b></span><span>✦ <b>Built to scale</b></span></div>
   </div>
   <div class="heroVisual" aria-hidden="true">
@@ -138,16 +140,16 @@ h1{font-size:clamp(54px,7vw,94px);line-height:.88;letter-spacing:-.075em;margin:
 </section>
 
 <section class="section wrap" id="offer">
-  <div class="sectionHead"><div><div class="eyebrow">02 / One simple offer</div><h2>One website. One clear price.</h2></div><p>No complicated service menu. No package maze. We are starting with one product and making that product exceptionally easy to understand and buy.</p></div>
+  <div class="sectionHead"><div><div class="eyebrow">02 / One simple offer</div><h2>One website. One clear starting price.</h2></div><p>No complicated service menu. No package maze. WingBait keeps the website offer simple: a one-time professional design & development fee, plus setup and running costs based on what your project actually needs.</p></div>
   <div class="offer">
-    <article class="offerCopy"><div class="eyebrow">SRB Website Build</div><h2>A serious online home for your business.</h2><p>A custom-designed business website focused on credibility, clarity, mobile experience and conversion.</p>
+    <article class="offerCopy"><div class="eyebrow">WingBait Website Build</div><h2>A serious online home for your business.</h2><p>A custom-designed business website focused on credibility, clarity, mobile experience and conversion.</p>
       <div class="checks"><span>Custom visual direction</span><span>Responsive website experience</span><span>Conversion-focused page structure</span><span>Contact / enquiry pathway</span><span>Launch-ready foundation</span></div>
     </article>
-    <article class="priceBox" id="priceBox"><div class="currencyControl"><span>Currency</span><button type="button" id="currencyBtn" aria-label="Switch currency">$ USD</button><small id="currencyNote">Auto-detected</small></div><div class="priceLabel" id="priceLabel">One-time build</div><div class="price" id="mainPrice">$99 <small>build</small></div>
-      <div class="priceLine"><span id="buildLabel">Website build</span><b id="buildPrice">$99 one time</b></div><div class="priceLine"><span id="setupLabel">Website cost</span><b id="setupPrice">$49</b></div>
+    <article class="priceBox" id="priceBox"><div class="currencyControl"><span>Currency</span><button type="button" id="currencyBtn" aria-label="Switch currency">$ USD</button><small id="currencyNote">Auto-detected</small></div><div class="priceLabel" id="priceLabel">One-time project fee</div><div class="price" id="mainPrice">$99 <small>build</small></div>
+      <div class="priceLine"><span id="buildLabel">WingBait website build</span><b id="buildPrice">$99 one time</b></div><div class="priceLine"><span id="setupLabel">Setup / running costs</span><b id="setupPrice">From $49</b></div>
       <div class="priceTotal"><strong id="totalLabel">Total starting cost</strong><span id="totalPrice">$148</span></div>
       <a class="btn primary" style="margin-top:25px" href="#contact">Start my website →</a>
-      <div class="priceNote" id="priceNote" aria-live="polite"></div>
+      <div class="priceNote" id="priceNote" aria-live="polite"></div><div class="priceDelivery"><span>Typical delivery</span><b>1–7 days</b><small>Depending on scope, content and requirements.</small></div>
     </article>
   </div>
 </section>
@@ -190,30 +192,42 @@ h1{font-size:clamp(54px,7vw,94px);line-height:.88;letter-spacing:-.075em;margin:
   <div class="eyebrow">05 / Start here</div>
   <h2>Your business deserves a better first impression.</h2>
   <p>Tell us what you do. We’ll turn it into a website direction that is clear, premium and ready to sell.</p>
-  <a class="btn primary" href="mailto:hello@srbdigital.agency?subject=I%20want%20a%20website">Start my website →</a>
+  <a class="btn primary" href="https://wa.me/919902807082?text=Hello%20WingBait%2C%20I%20want%20to%20discuss%20a%20website.">Start my website →</a>
 </section>
 </main>
 
-<footer class="wrap"><div><b>© 2026 SRB Digital</b></div><div class="footerRight">Websites for businesses that want to move forward.</div><div class="footerContact"><a class="contactPill" href="mailto:hello@srbdigital.agency?subject=I%20want%20a%20website" aria-label="Email SRB Digital">✉ Email</a><a class="contactPill whatsapp" id="whatsappLink" href="https://wa.me/?text=Hello%20SRB%20Digital%2C%20I%20want%20to%20discuss%20a%20website." target="_blank" rel="noopener" aria-label="Contact SRB Digital on WhatsApp">WhatsApp ↗</a></div></footer>
+<footer class="wrap"><div><b>© 2026 WingBait</b></div><div class="footerRight">Websites that move your business forward.</div><div class="footerContact"><a class="contactPill" href="mailto:wingbait@zohomail.in?subject=I%20want%20a%20website" aria-label="Email WingBait">✉ Email</a><a class="contactPill whatsapp" id="whatsappLink" href="https://wa.me/919902807082?text=Hello%20WingBait%2C%20I%20want%20to%20discuss%20a%20website." target="_blank" rel="noopener" aria-label="Contact WingBait on WhatsApp">WhatsApp ↗</a></div></footer>
 
 <!-- Compact floating AI companion. It is independent from page layout and never uses a blue status dot. -->
 <div class="ai" id="ai">
-  <button class="aiOrb" id="aiOrb" aria-label="Open SRB AI assistant">
+  <button class="aiOrb" id="aiOrb" aria-label="Open WingBait AI assistant">
     <span class="aiScreen"><i class="aiEye l"></i><i class="aiEye r"></i><i class="aiMouth"></i></span>
     <i class="aiEar l"></i><i class="aiEar r"></i><i class="aiStatus"></i>
   </button>
-  <div class="aiBubble" id="aiBubble"><b>SRB AI</b>Need help choosing the right website direction?</div>
+  <div class="aiBubble" id="aiBubble"><b>WingBait AI</b>Tell me about your business — I’ll help map out the right website.</div>
   <div class="aiPanel" id="aiPanel">
-    <div class="aiHead"><div><b>SRB AI Consultant</b><span>Ready when you need help</span></div><button class="aiClose" id="aiClose" aria-label="Close assistant">×</button></div>
-    <div class="aiBody"><p style="margin:0 0 12px;color:#9eaaa1;font-size:12px">I can explain the website offer, help you decide what your site needs, or take you to the right section.</p>
-      <div class="quick"><button data-go="#offer">See the price</button><button data-go="#work">See examples</button><button data-go="#process">How it works</button></div>
-      <div class="aiInput"><input id="aiText" placeholder="Ask about your website…"><button id="aiSend">↗</button></div>
+    <div class="aiHead"><div><b>WingBait AI Consultant</b><span id="aiStatusText">Ready when you need help</span></div><button class="aiClose" id="aiClose" aria-label="Close assistant">×</button></div>
+    <div class="aiBody"><p id="aiIntro" style="margin:0 0 12px;color:#9eaaa1;font-size:12px">Tell me about your business and what you want the website to achieve. I’ll help map the right website and prepare your enquiry for WhatsApp.</p>
+      <div id="aiChat" style="display:grid;gap:8px;max-height:210px;overflow:auto;margin-bottom:10px"></div>
+      <div class="quick" id="aiQuick"><button data-go="#offer">See the price</button><button data-go="#work">See examples</button><button data-go="#process">How it works</button><button id="aiStart">Start consultation</button></div>
+      <div id="aiProgress" style="display:none;margin:8px 0 10px;color:#7f8c83;font-size:9px;letter-spacing:.08em;text-transform:uppercase"></div>
+      <div id="aiActions" style="display:none;gap:7px;margin-top:8px"><button id="aiBack" class="aiAction">← Back</button><button id="aiRestart" class="aiAction">Start over</button></div>
+      <div class="aiInput"><input id="aiText" placeholder="Tell me about your business…"><button id="aiSend">↗</button></div><div class="aiPrivacy">Your answers are used to prepare your WingBait enquiry and WhatsApp summary.</div>
     </div>
   </div>
 </div>
 
 <script>
 (function(){
+  const WINGBAIT={
+    brand:'WingBait',
+    whatsapp:'+919902807082',
+    email:'wingbait@zohomail.in',
+    upiId:'wingbait.in@okicici',
+    upiNumber:'990280708',
+    paypalEmail:'wingbait@zohomail.in',
+    delivery:'1–7 days, depending on scope'
+  };
   const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 
   // Regional pricing: auto-detect India/international, with a one-tap manual override.
@@ -229,11 +243,11 @@ h1{font-size:clamp(54px,7vw,94px);line-height:.88;letter-spacing:-.075em;margin:
   const currencyBtn=$('#currencyBtn');
   const currencyNote=$('#currencyNote');
   let manualCurrency=null;
-  try { manualCurrency=localStorage.getItem('srb_currency'); } catch(e) {}
+  try { manualCurrency=localStorage.getItem('wingbait_currency'); } catch(e) {}
   let currency=manualCurrency==='INR'||manualCurrency==='USD' ? manualCurrency : (isIndia?'INR':'USD');
   const pricing={
-    INR:{region:'india',label:'One-time build',main:'₹2,499',build:'₹2,499 one time',setupLabel:'Setup / running costs',setup:'From ₹449',totalLabel:'Minimum starting total',total:'₹2,948',note:'₹2,499 one-time website build. Setup and other costs depend on your requirements; setup starts from ₹449.'},
-    USD:{region:'international',label:'One-time build',main:'$99',build:'$99 one time',setupLabel:'Website cost',setup:'$49',totalLabel:'Total starting cost',total:'$148',note:'International pricing shown in USD. Additional costs can vary with requirements.'}
+    INR:{region:'india',label:'One-time project fee',main:'₹2,499',build:'₹2,499 one time',setupLabel:'Setup / running costs',setup:'From ₹449',totalLabel:'Minimum starting total',total:'₹2,948',note:'₹2,499 one-time website build. Setup and running costs depend on your requirements; they start from ₹449.'},
+    USD:{region:'international',label:'One-time project fee',main:'$99',build:'$99 one time',setupLabel:'Website cost',setup:'From $49',totalLabel:'Total starting cost',total:'$148',note:'International pricing shown in USD. Website setup and running costs depend on your requirements; they start from $49.'}
   };
   function renderPricing(){
     const data=pricing[currency];
@@ -256,7 +270,7 @@ h1{font-size:clamp(54px,7vw,94px);line-height:.88;letter-spacing:-.075em;margin:
   currencyBtn?.addEventListener('click',()=>{
     currency=currency==='INR'?'USD':'INR';
     manualCurrency=currency;
-    try { localStorage.setItem('srb_currency',currency); } catch(e) {}
+    try { localStorage.setItem('wingbait_currency',currency); } catch(e) {}
     renderPricing();
   });
 
@@ -320,16 +334,62 @@ h1{font-size:clamp(54px,7vw,94px);line-height:.88;letter-spacing:-.075em;margin:
     panel.classList.remove('open');bubble.classList.remove('show');
     document.querySelector(b.dataset.go)?.scrollIntoView({behavior:'smooth',block:'start'});
   }));
-  function reply(){
-    const v=$('#aiText').value.trim().toLowerCase();if(!v)return;
-    let target='#offer';
-    if(v.includes('work')||v.includes('example')||v.includes('design'))target='#work';
-    if(v.includes('process')||v.includes('how'))target='#process';
-    if(v.includes('price')||v.includes('cost')||v.includes('99')||v.includes('49'))target='#offer';
-    $('#aiText').value='';
-    panel.classList.remove('open');
-    setTimeout(()=>document.querySelector(target)?.scrollIntoView({behavior:'smooth',block:'start'}),80);
+  const aiState={step:-1,data:{},history:[]};
+  const aiQuestions=[
+    ['name','What should I call you?'],
+    ['business','What is your business or brand name?'],
+    ['type','What does your business do, and who do you serve?'],
+    ['goal','What should the website help you achieve?'],
+    ['pages','What pages, sections, or features do you need?'],
+    ['style','Any preferred style, colours, references, or websites you like?'],
+    ['timing','When would you ideally like the website ready?'],
+    ['contact','What is the best WhatsApp number or email for follow-up? (Optional)']
+  ];
+  const progress=$('#aiProgress'),actions=$('#aiActions'),statusText=$('#aiStatusText');
+  function aiAdd(text,who='bot'){const box=$('#aiChat');const el=document.createElement('div');el.className='aiMsg '+who;el.textContent=text;box.appendChild(el);box.scrollTop=box.scrollHeight;}
+  function aiUpdateProgress(){if(aiState.step<0){progress.style.display='none';return}progress.style.display='block';progress.textContent=`Consultation · ${aiState.step+1} of ${aiQuestions.length}`;statusText.textContent='Building your website brief';actions.style.display='flex';}
+  function aiStart(){aiState.step=0;aiState.data={};aiState.history=[];$('#aiChat').innerHTML='';$('#aiQuick').style.display='none';$('#aiText').disabled=false;$('#aiText').value='';$('#aiText').placeholder='Type your answer…';aiUpdateProgress();aiAdd('Great — I’ll ask a few short questions so I can understand what your business actually needs.');setTimeout(()=>aiAdd(aiQuestions[0][1]),80);$('#aiText').focus();}
+  function aiBack(){if(aiState.step<=0)return;aiState.step--;const key=aiQuestions[aiState.step][0];delete aiState.data[key];const box=$('#aiChat');box.innerHTML='';Object.entries(aiState.data).forEach(([k,v])=>{const q=aiQuestions.find(x=>x[0]===k);if(q){aiAdd(q[1]);aiAdd(v,'user')}});aiAdd(aiQuestions[aiState.step][1]);$('#aiText').value='';aiUpdateProgress();$('#aiText').focus();}
+  function aiRestart(){aiStart();}
+  async function saveLeadToCloud(lead){
+    try{
+      const cfg=window.WINGBAIT_SUPABASE||{};
+      if(!window.supabase||!cfg.url||!cfg.anonKey)return;
+      const client=window.supabase.createClient(cfg.url,cfg.anonKey);
+      const row={source:'website_ai',name:lead.name||null,business:lead.business||null,type:lead.type||null,goal:lead.goal||null,pages:lead.pages||null,style:lead.style||null,timing:lead.timing||null,contact:lead.contact||null,email:lead.email||null,phone:lead.phone||null,fit:lead.fit||null,recommendation:lead.recommendation||null,status:'New'};
+      const {error}=await client.from('leads').insert(row);
+      if(error)console.warn('WingBait cloud lead save failed:',error.message);
+    }catch(e){console.warn('WingBait cloud lead save failed:',e.message||e);}
   }
+  function aiFinish(){
+    const d=aiState.data;
+    const text=((d.pages||'')+' '+(d.goal||'')+' '+(d.type||'')).toLowerCase();
+    let recommendation='A focused business website with a clear mobile-first structure.';
+    let fit='Business website';
+    if(/lead|enquir|contact|whatsapp|book|appointment|sell|sale/.test(text)){fit='Conversion-focused website';recommendation='A conversion-focused website with strong enquiry/contact calls to action and a clear path to WhatsApp.';}
+    else if(/portfolio|work|case stud|personal brand/.test(text)){fit='Portfolio-led website';recommendation='A portfolio-led website that makes your work, credibility and proof the focus.';}
+    else if(/shop|store|product|catalog|ecommerce|e-commerce/.test(text)){fit='Product-focused website';recommendation='A product-focused website structure built around clear discovery, product presentation and enquiries.';}
+    const lead={id:'LEAD-'+Date.now(),createdAt:new Date().toISOString(),status:'New',recommendation,fit,...d};
+    let leads=[];try{leads=JSON.parse(localStorage.getItem('wingbait_leads')||'[]')}catch(e){}
+    leads.unshift(lead);try{localStorage.setItem('wingbait_leads',JSON.stringify(leads.slice(0,200)))}catch(e){}
+    saveLeadToCloud(lead);
+    const summary=`Hello WingBait, I completed the website consultation.\n\nName: ${d.name||'Not provided'}\nBusiness: ${d.business||'Not provided'}\nBusiness / audience: ${d.type||'Not provided'}\nWebsite goal: ${d.goal||'Not provided'}\nPages / features: ${d.pages||'Not provided'}\nStyle / references: ${d.style||'Not provided'}\nTarget timing: ${d.timing||'Not provided'}\nContact: ${d.contact||'Not provided'}\n\nRecommended direction: ${fit}\nWingBait AI recommendation: ${recommendation}\n\nPlease help me discuss the project and next steps.`;
+    $('#aiChat').innerHTML='';aiAdd('Your website brief is ready.');aiAdd(`Best fit: ${fit}. ${recommendation}`,'bot');
+    const note=document.createElement('div');note.className='aiMsg bot';note.textContent='Your enquiry has been prepared for WingBait. The WhatsApp message below contains the full brief.';$('#aiChat').appendChild(note);
+    const go=document.createElement('a');go.className='btn primary';go.style.marginTop='8px';go.style.width='100%';go.style.textAlign='center';go.href='https://wa.me/919902807082?text='+encodeURIComponent(summary);go.target='_blank';go.rel='noopener';go.textContent='Continue on WhatsApp →';$('#aiChat').appendChild(go);
+    const details=document.createElement('button');details.className='aiAction';details.style.width='100%';details.style.marginTop='7px';details.textContent='Review my answers';details.addEventListener('click',()=>{aiState.step=0;const box=$('#aiChat');box.innerHTML='';aiQuestions.forEach(q=>{if(d[q[0]]){aiAdd(q[1]);aiAdd(d[q[0]],'user')}});progress.style.display='none';statusText.textContent='Review your brief';$('#aiText').disabled=true;});$('#aiChat').appendChild(details);
+    $('#aiText').value='';$('#aiText').placeholder='Consultation complete';$('#aiText').disabled=true;progress.style.display='none';actions.style.display='flex';statusText.textContent='Brief ready for WhatsApp';aiState.step=-1;
+  }
+  function reply(){const input=$('#aiText');const raw=input.value.trim();if(!raw||input.disabled)return;
+    if(aiState.step>=0){const key=aiQuestions[aiState.step][0];aiState.data[key]=raw;aiAdd(raw,'user');aiState.step++;input.value='';if(aiState.step<aiQuestions.length){aiUpdateProgress();setTimeout(()=>aiAdd(aiQuestions[aiState.step][1]),120)}else{aiFinish()}return;}
+    const v=raw.toLowerCase();
+    if(v.includes('whatsapp')||v.includes('contact')||v.includes('talk')||v.includes('start')){const msg='Hello WingBait, I want to discuss a website. My requirement: '+raw;window.open('https://wa.me/919902807082?text='+encodeURIComponent(msg),'_blank','noopener');input.value='';panel.classList.remove('open');return;}
+    let target='#offer';if(v.includes('work')||v.includes('example')||v.includes('sample')||v.includes('design'))target='#work';if(v.includes('process')||v.includes('how'))target='#process';if(v.includes('price')||v.includes('cost')||v.includes('99')||v.includes('49')||v.includes('2499')||v.includes('449'))target='#offer';if(v.includes('email'))target='#contact';aiAdd('I can help with that. I’ll take you to the relevant part of the WingBait website.');input.value='';panel.classList.remove('open');setTimeout(()=>document.querySelector(target)?.scrollIntoView({behavior:'smooth',block:'start'}),80);
+  }
+  $('#aiStart').addEventListener('click',aiStart);
+  $('#heroBuildBtn')?.addEventListener('click',()=>{setTimeout(()=>{$('#aiStart')?.click()},250)});
+  $('#aiBack').addEventListener('click',aiBack);
+  $('#aiRestart').addEventListener('click',aiRestart);
   $('#aiSend').addEventListener('click',reply);$('#aiText').addEventListener('keydown',e=>{if(e.key==='Enter')reply()});
   document.addEventListener('pointerdown',e=>{if(panel.classList.contains('open')&&!panel.contains(e.target)&&!orb.contains(e.target))panel.classList.remove('open')});
   document.addEventListener('keydown',e=>{if(e.key==='Escape')panel.classList.remove('open')});

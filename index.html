@@ -33,7 +33,7 @@ h1{font-size:clamp(54px,7vw,94px);line-height:.88;letter-spacing:-.075em;margin:
 .cta{max-width:var(--content);margin:50px auto 120px;padding:75px 40px;border:1px solid var(--line);border-radius:32px;text-align:center;background:radial-gradient(circle at 50% 0%,rgba(98,255,123,.12),transparent 52%),rgba(5,14,7,.72)}.cta h2{font-size:clamp(42px,6vw,78px);line-height:.92;letter-spacing:-.07em;margin:8px auto 16px;max-width:850px}.cta p{color:var(--muted);max-width:580px;margin:0 auto 25px}footer{max-width:var(--content);display:flex;justify-content:space-between;gap:20px;padding-bottom:35px;color:#738078;font-size:11px}
 /* AI is viewport-fixed: it must never participate in page columns or create a right-side layout gap. */
 .ai{position:fixed;right:18px;bottom:max(18px,env(safe-area-inset-bottom));z-index:90;width:82px;height:82px;overflow:visible;touch-action:none}.aiOrb{position:absolute;right:0;bottom:0;width:76px;height:76px;border-radius:30px 34px 31px 27px;border:1px solid rgba(255,255,255,.2);background:linear-gradient(145deg,#f5f7f4,#c8d0c9 45%,#707d73);box-shadow:inset 8px 8px 15px rgba(255,255,255,.8),inset -12px -14px 24px rgba(20,30,22,.28),0 28px 60px rgba(0,0,0,.55),0 0 30px rgba(98,255,123,.1);cursor:grab;animation:aiFloat 5s ease-in-out infinite;touch-action:none;padding:0}.aiScreen{position:absolute;inset:13px;border-radius:23px;background:linear-gradient(160deg,#102519,#06120a);box-shadow:inset 0 0 18px rgba(98,255,123,.2);overflow:hidden}.aiEye{position:absolute;top:22px;width:14px;height:9px;border-radius:99px;background:#f2fff4;transform:translate(var(--look-x,0),var(--look-y,0));transition:transform .15s ease}.aiEye.l{left:13px}.aiEye.r{right:13px}.aiMouth{position:absolute;top:38px;left:50%;width:20px;height:8px;transform:translateX(-50%);border-radius:99px;background:#f2fff4}.aiEar{position:absolute;top:23px;width:7px;height:25px;border-radius:8px;background:#dfe6e0}.aiEar.l{left:-3px}.aiEar.r{right:-3px}.aiStatus{position:absolute;right:-2px;top:-3px;width:11px;height:11px;border-radius:50%;background:var(--green);box-shadow:0 0 14px var(--green)}@keyframes aiFloat{50%{transform:translateY(-6px)}}
-.aiBubble,.aiPanel{position:fixed;display:none;border:1px solid rgba(98,255,123,.2);background:rgba(3,9,5,.94);backdrop-filter:blur(22px);box-shadow:0 25px 70px rgba(0,0,0,.55);z-index:91}.aiBubble{padding:12px 14px;border-radius:16px;color:#c7d0ca;font-size:10px;line-height:1.5}.aiBubble.show{display:block}.aiBubble b{display:block;color:#fff;margin-bottom:4px}.aiPanel{border-radius:20px;max-height:calc(100dvh - 20px);overflow:auto}.aiPanel.open{display:block}.aiHead{display:flex;justify-content:space-between;align-items:center;padding:16px;border-bottom:1px solid var(--soft)}.aiHead b{display:block}.aiHead span{display:block;color:#7f8c83;font-size:10px;margin-top:2px}.aiClose{border:0;background:none;color:#fff;font-size:22px}.aiBody{padding:16px}.quick{display:grid;grid-template-columns:1fr 1fr;gap:8px}.quick button{padding:10px;border:1px solid var(--soft);border-radius:11px;background:rgba(255,255,255,.03);color:#dce4df;font-size:11px}.aiAction{flex:1;padding:9px;border:1px solid var(--soft);border-radius:10px;background:rgba(255,255,255,.03);color:#cfd8d2;font-size:10px}.aiInput{display:flex;gap:7px;margin-top:12px} .aiPrivacy{margin-top:7px;color:#647068;font-size:9px;line-height:1.4}.aiInput input{min-width:0;flex:1;padding:11px;border:1px solid var(--soft);border-radius:11px;background:rgba(255,255,255,.04);color:#fff;outline:none}.aiInput button{width:42px;border:0;border-radius:11px;background:var(--green);color:#021006;font-weight:900}.aiMsg{padding:8px 10px;border:1px solid var(--soft);border-radius:11px;font-size:11px;line-height:1.45;color:#dce5df;background:rgba(255,255,255,.025)}.aiMsg.bot{border-color:rgba(98,255,123,.16)}.aiMsg.user{background:rgba(98,255,123,.07);text-align:right}
+.aiBubble,.aiPanel{position:fixed;display:none;border:1px solid rgba(98,255,123,.2);background:rgba(3,9,5,.94);backdrop-filter:blur(22px);box-shadow:0 25px 70px rgba(0,0,0,.55);z-index:91}.aiBubble{padding:12px 14px;border-radius:16px;color:#c7d0ca;font-size:10px;line-height:1.5}.aiBubble.show{display:block}.aiBubble b{display:block;color:#fff;margin-bottom:4px}.aiPanel{border-radius:20px;max-height:calc(100dvh - 20px);overflow:auto}.aiPanel.open{display:block}.aiHead{display:flex;justify-content:space-between;align-items:center;padding:16px;border-bottom:1px solid var(--soft)}.aiHead b{display:block}.aiHead span{display:block;color:#7f8c83;font-size:10px;margin-top:2px}.aiClose{border:0;background:none;color:#fff;font-size:22px}.aiBody{padding:16px}.quick{display:grid;grid-template-columns:1fr 1fr;gap:8px}.quick button{padding:10px;border:1px solid var(--soft);border-radius:11px;background:rgba(255,255,255,.03);color:#dce4df;font-size:11px}.aiOptions{display:grid;gap:7px}.aiOption{padding:10px 11px;border:1px solid rgba(98,255,123,.16);border-radius:11px;background:rgba(98,255,123,.045);color:#dce5df;font-size:11px;text-align:left;cursor:pointer}.aiOption:hover{background:rgba(98,255,123,.09);border-color:rgba(98,255,123,.3)}.aiAction{flex:1;padding:9px;border:1px solid var(--soft);border-radius:10px;background:rgba(255,255,255,.03);color:#cfd8d2;font-size:10px}.aiInput{display:flex;gap:7px;margin-top:12px} .aiPrivacy{margin-top:7px;color:#647068;font-size:9px;line-height:1.4}.aiInput input{min-width:0;flex:1;padding:11px;border:1px solid var(--soft);border-radius:11px;background:rgba(255,255,255,.04);color:#fff;outline:none}.aiInput button{width:42px;border:0;border-radius:11px;background:var(--green);color:#021006;font-weight:900}.aiMsg{padding:8px 10px;border:1px solid var(--soft);border-radius:11px;font-size:11px;line-height:1.45;color:#dce5df;background:rgba(255,255,255,.025)}.aiMsg.bot{border-color:rgba(98,255,123,.16)}.aiMsg.user{background:rgba(98,255,123,.07);text-align:right}
 @media (max-width:1100px){:root{--gutter:32px}.hero{gap:35px}.heroVisual{height:500px}.processGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.portfolio{grid-template-columns:1fr 1fr}.work:first-child{grid-row:auto;min-height:430px}}
 @media (max-width:820px){:root{--gutter:24px}.navlinks,.navcta{display:none}.menu{display:grid;place-items:center}.nav.open .navlinks{display:flex;position:absolute;left:8px;right:8px;top:58px;flex-direction:column;align-items:stretch;padding:8px;border:1px solid var(--line);border-radius:15px;background:rgba(2,7,3,.97);backdrop-filter:blur(22px)}.nav.open .navlinks a{width:100%}.hero{display:flex;flex-direction:column;align-items:stretch;gap:0;min-height:0;padding-top:70px;padding-bottom:45px}.hero>div:first-child{max-width:720px;margin-inline:auto}.heroVisual{height:390px;margin-top:8px}.sectionHead{grid-template-columns:1fr;gap:16px}.valueGrid,.offer{grid-template-columns:1fr}.valueSide{grid-template-columns:1fr 1fr}.portfolio{grid-template-columns:1fr 1fr}.work,.work:first-child{min-height:390px}.cta{margin-inline:var(--gutter);width:auto}.heroVisual:before{width:360px;height:360px}.ribbons{transform:scale(.72) rotate(-14deg)}}
 @media (max-width:600px){:root{--gutter:16px}.nav{width:calc(100% - 16px);margin-top:10px}.hero{padding-top:58px;padding-bottom:30px}.kicker{max-width:100%;font-size:9px;letter-spacing:.09em}.hero h1{font-size:clamp(44px,13vw,60px);max-width:100%;line-height:.9;margin:19px 0 20px}.hero p{font-size:15px;line-height:1.68}.actions{display:grid;grid-template-columns:1fr;gap:9px;margin:24px 0 18px}.actions .btn{width:100%;min-height:54px}.trust{gap:7px 14px;font-size:10px}.heroVisual{height:320px;margin-top:5px;overflow:visible}.orbit{width:330px;height:125px}.orbit.o2{width:370px;height:145px}.ribbons{width:390px;height:390px;transform:scale(.54) rotate(-14deg)}.webCore{width:235px;height:170px;transform:scale(.68) perspective(800px) rotateX(10deg) rotateY(-12deg)}.floatTag{max-width:140px;padding:8px 9px;font-size:9px}.floatTag b{font-size:10px}.tag1{left:0;top:5%}.tag2{right:0;bottom:12%}.tag3{display:none}.section{padding-top:75px;padding-bottom:75px}.sectionHead{margin-bottom:28px}.sectionHead h2{font-size:clamp(38px,11vw,52px)}.sectionHead p{font-size:14px}.miniList{grid-template-columns:1fr}.valueSide{grid-template-columns:1fr}.valueMain,.valueCard,.offerCopy,.priceBox{padding:22px;border-radius:20px}.portfolio{grid-template-columns:1fr}.work,.work:first-child{min-height:360px}.processGrid{grid-template-columns:1fr}.step{padding:22px 0}.step h3{margin-top:26px}.cta{padding:48px 20px;border-radius:24px;margin-top:25px;margin-bottom:75px}.cta h2{font-size:clamp(40px,11vw,56px)}footer{flex-direction:column;padding-bottom:28px}.ai{right:10px;bottom:max(10px,env(safe-area-inset-bottom));width:70px;height:70px}.aiOrb{width:64px;height:64px;border-radius:24px}.aiScreen{inset:11px;border-radius:19px}.aiEye{top:19px;width:12px;height:8px}.aiEye.l{left:11px}.aiEye.r{right:11px}.aiMouth{top:33px;width:18px}.aiEar{top:20px;height:22px}.aiBubble{max-width:230px;font-size:10px}.quick{grid-template-columns:1fr}.cta .btn{width:100%}}
@@ -207,7 +207,7 @@ h1{font-size:clamp(54px,7vw,94px);line-height:.88;letter-spacing:-.075em;margin:
   <div class="aiBubble" id="aiBubble"><b>WingBait AI</b>Tell me about your business — I’ll help map out the right website.</div>
   <div class="aiPanel" id="aiPanel">
     <div class="aiHead"><div><b>WingBait AI Consultant</b><span id="aiStatusText">Ready when you need help</span></div><button class="aiClose" id="aiClose" aria-label="Close assistant">×</button></div>
-    <div class="aiBody"><p id="aiIntro" style="margin:0 0 12px;color:#9eaaa1;font-size:12px">Tell me about your business and what you want the website to achieve. I’ll help map the right website and prepare your enquiry for WhatsApp.</p>
+    <div class="aiBody"><p id="aiIntro" style="margin:0 0 12px;color:#9eaaa1;font-size:12px">4 quick questions. Pick an option and I’ll prepare a ready-to-send enquiry for WhatsApp — no long form.</p>
       <div id="aiChat" style="display:grid;gap:8px;max-height:210px;overflow:auto;margin-bottom:10px"></div>
       <div class="quick" id="aiQuick"><button data-go="#offer">See the price</button><button data-go="#work">See examples</button><button data-go="#process">How it works</button><button id="aiStart">Start consultation</button></div>
       <div id="aiProgress" style="display:none;margin:8px 0 10px;color:#7f8c83;font-size:9px;letter-spacing:.08em;text-transform:uppercase"></div>
@@ -336,21 +336,56 @@ h1{font-size:clamp(54px,7vw,94px);line-height:.88;letter-spacing:-.075em;margin:
   }));
   const aiState={step:-1,data:{},history:[]};
   const aiQuestions=[
-    ['name','What should I call you?'],
-    ['business','What is your business or brand name?'],
-    ['type','What does your business do, and who do you serve?'],
-    ['goal','What should the website help you achieve?'],
-    ['pages','What pages, sections, or features do you need?'],
-    ['style','Any preferred style, colours, references, or websites you like?'],
-    ['timing','When would you ideally like the website ready?'],
-    ['contact','What is the best WhatsApp number or email for follow-up? (Optional)']
+    {key:'business',text:'What’s your business or brand name?',placeholder:'e.g. Sharma Dental Clinic',options:[]},
+    {key:'goal',text:'What do you mainly want the website to do?',placeholder:'Choose one',options:[
+      ['Get more enquiries / WhatsApp leads','Get more enquiries, calls or WhatsApp leads'],
+      ['Show services & build trust','Present services, pricing and credibility'],
+      ['Sell / showcase products','Show products, catalogues or take sales enquiries'],
+      ['Show portfolio / personal brand','Highlight work, projects or a personal brand']
+    ]},
+    {key:'pages',text:'What should it include?',placeholder:'Choose what fits best',options:[
+      ['Simple & essential','Home, About, Services, Contact + WhatsApp'],
+      ['Business + lead generation','Services, proof/testimonials, FAQs + strong CTAs'],
+      ['Products / catalogue','Products, categories, details + enquiry buttons'],
+      ['Portfolio / showcase','Work, projects, case studies + contact'],
+      ['Not sure — choose for me','Let WingBait recommend the right structure']
+    ]},
+    {key:'timing',text:'When do you want it ready?',placeholder:'Choose a timeline',options:[
+      ['As soon as possible','I want to start quickly'],
+      ['Within 1–3 days','Fast turnaround'],
+      ['Within 1 week','Normal project timeline'],
+      ['Just exploring','I’m only checking options for now']
+    ]}
   ];
   const progress=$('#aiProgress'),actions=$('#aiActions'),statusText=$('#aiStatusText');
   function aiAdd(text,who='bot'){const box=$('#aiChat');const el=document.createElement('div');el.className='aiMsg '+who;el.textContent=text;box.appendChild(el);box.scrollTop=box.scrollHeight;}
-  function aiUpdateProgress(){if(aiState.step<0){progress.style.display='none';return}progress.style.display='block';progress.textContent=`Consultation · ${aiState.step+1} of ${aiQuestions.length}`;statusText.textContent='Building your website brief';actions.style.display='flex';}
-  function aiStart(){aiState.step=0;aiState.data={};aiState.history=[];$('#aiChat').innerHTML='';$('#aiQuick').style.display='none';$('#aiText').disabled=false;$('#aiText').value='';$('#aiText').placeholder='Type your answer…';aiUpdateProgress();aiAdd('Great — I’ll ask a few short questions so I can understand what your business actually needs.');setTimeout(()=>aiAdd(aiQuestions[0][1]),80);$('#aiText').focus();}
-  function aiBack(){if(aiState.step<=0)return;aiState.step--;const key=aiQuestions[aiState.step][0];delete aiState.data[key];const box=$('#aiChat');box.innerHTML='';Object.entries(aiState.data).forEach(([k,v])=>{const q=aiQuestions.find(x=>x[0]===k);if(q){aiAdd(q[1]);aiAdd(v,'user')}});aiAdd(aiQuestions[aiState.step][1]);$('#aiText').value='';aiUpdateProgress();$('#aiText').focus();}
+  function aiOptions(q){
+    const box=$('#aiChat');
+    if(!q.options.length)return;
+    const wrap=document.createElement('div');wrap.className='aiOptions';
+    q.options.forEach(([label,value])=>{const b=document.createElement('button');b.type='button';b.className='aiOption';b.textContent=label;b.addEventListener('click',()=>aiChoose(value,label));wrap.appendChild(b)});
+    box.appendChild(wrap);box.scrollTop=box.scrollHeight;
+  }
+  function aiAsk(){
+    const q=aiQuestions[aiState.step];
+    if(!q)return;
+    aiAdd(q.text);
+    aiOptions(q);
+    const input=$('#aiText');input.placeholder=q.placeholder;input.value='';input.disabled=q.options.length>0;input.style.display=q.options.length?'none':'block';
+  }
+  function aiUpdateProgress(){if(aiState.step<0){progress.style.display='none';return}progress.style.display='block';progress.textContent=`Quick brief · ${aiState.step+1} of ${aiQuestions.length}`;statusText.textContent='Just a few quick choices';actions.style.display='flex';}
+  function aiStart(){aiState.step=0;aiState.data={};aiState.history=[];$('#aiChat').innerHTML='';$('#aiQuick').style.display='none';$('#aiText').disabled=false;$('#aiText').style.display='block';aiUpdateProgress();aiAdd('Perfect — this takes about 5–10 seconds.');setTimeout(aiAsk,80);$('#aiText').focus();}
+  function aiRenderFromData(){
+    const box=$('#aiChat');box.innerHTML='';
+    aiQuestions.forEach(q=>{if(aiState.data[q.key]){aiAdd(q.text);aiAdd(aiState.data[q.key],'user')}});
+    if(aiState.step>=0)aiAsk();
+  }
+  function aiBack(){if(aiState.step<=0)return;aiState.step--;delete aiState.data[aiQuestions[aiState.step].key];aiUpdateProgress();aiRenderFromData();}
   function aiRestart(){aiStart();}
+  function aiChoose(value,label){
+    if(aiState.step<0)return;
+    const q=aiQuestions[aiState.step];aiState.data[q.key]=value;aiAdd(label,'user');aiState.step++;if(aiState.step<aiQuestions.length){aiUpdateProgress();setTimeout(aiAsk,100)}else{aiFinish();}
+  }
   async function saveLeadToCloud(lead){
     try{
       const cfg=window.WINGBAIT_SUPABASE||{};
@@ -363,25 +398,25 @@ h1{font-size:clamp(54px,7vw,94px);line-height:.88;letter-spacing:-.075em;margin:
   }
   function aiFinish(){
     const d=aiState.data;
-    const text=((d.pages||'')+' '+(d.goal||'')+' '+(d.type||'')).toLowerCase();
+    const text=((d.pages||'')+' '+(d.goal||'')).toLowerCase();
     let recommendation='A focused business website with a clear mobile-first structure.';
     let fit='Business website';
-    if(/lead|enquir|contact|whatsapp|book|appointment|sell|sale/.test(text)){fit='Conversion-focused website';recommendation='A conversion-focused website with strong enquiry/contact calls to action and a clear path to WhatsApp.';}
-    else if(/portfolio|work|case stud|personal brand/.test(text)){fit='Portfolio-led website';recommendation='A portfolio-led website that makes your work, credibility and proof the focus.';}
-    else if(/shop|store|product|catalog|ecommerce|e-commerce/.test(text)){fit='Product-focused website';recommendation='A product-focused website structure built around clear discovery, product presentation and enquiries.';}
+    if(/lead|enquir|whatsapp|service/.test(text)){fit='Conversion-focused website';recommendation='A conversion-focused website with clear services, trust signals and strong WhatsApp enquiry calls to action.';}
+    else if(/portfolio|personal|showcase|project|case/.test(text)){fit='Portfolio-led website';recommendation='A portfolio-led website that makes your work, proof and credibility the focus.';}
+    else if(/sell|product|catalog/.test(text)){fit='Product-focused website';recommendation='A product-focused website built around clear product discovery, presentation and enquiries.';}
     const lead={id:'LEAD-'+Date.now(),createdAt:new Date().toISOString(),status:'New',recommendation,fit,...d};
     let leads=[];try{leads=JSON.parse(localStorage.getItem('wingbait_leads')||'[]')}catch(e){}
     leads.unshift(lead);try{localStorage.setItem('wingbait_leads',JSON.stringify(leads.slice(0,200)))}catch(e){}
     saveLeadToCloud(lead);
-    const summary=`Hello WingBait, I completed the website consultation.\n\nName: ${d.name||'Not provided'}\nBusiness: ${d.business||'Not provided'}\nBusiness / audience: ${d.type||'Not provided'}\nWebsite goal: ${d.goal||'Not provided'}\nPages / features: ${d.pages||'Not provided'}\nStyle / references: ${d.style||'Not provided'}\nTarget timing: ${d.timing||'Not provided'}\nContact: ${d.contact||'Not provided'}\n\nRecommended direction: ${fit}\nWingBait AI recommendation: ${recommendation}\n\nPlease help me discuss the project and next steps.`;
-    $('#aiChat').innerHTML='';aiAdd('Your website brief is ready.');aiAdd(`Best fit: ${fit}. ${recommendation}`,'bot');
-    const note=document.createElement('div');note.className='aiMsg bot';note.textContent='Your enquiry has been prepared for WingBait. The WhatsApp message below contains the full brief.';$('#aiChat').appendChild(note);
+    const summary=`Hello WingBait, I completed the quick website brief.\n\nBusiness: ${d.business||'Not provided'}\nMain goal: ${d.goal||'Not provided'}\nWebsite scope: ${d.pages||'Not provided'}\nTarget timing: ${d.timing||'Not provided'}\n\nRecommended direction: ${fit}\nWingBait AI recommendation: ${recommendation}\n\nI’d like to discuss the project and next steps.`;
+    $('#aiChat').innerHTML='';aiAdd('Done — your 4-answer brief is ready.');aiAdd(`Best fit: ${fit}. ${recommendation}`,'bot');
+    const note=document.createElement('div');note.className='aiMsg bot';note.textContent='No long form. Continue on WhatsApp and WingBait can take it from here.';$('#aiChat').appendChild(note);
     const go=document.createElement('a');go.className='btn primary';go.style.marginTop='8px';go.style.width='100%';go.style.textAlign='center';go.href='https://wa.me/919902807082?text='+encodeURIComponent(summary);go.target='_blank';go.rel='noopener';go.textContent='Continue on WhatsApp →';$('#aiChat').appendChild(go);
-    const details=document.createElement('button');details.className='aiAction';details.style.width='100%';details.style.marginTop='7px';details.textContent='Review my answers';details.addEventListener('click',()=>{aiState.step=0;const box=$('#aiChat');box.innerHTML='';aiQuestions.forEach(q=>{if(d[q[0]]){aiAdd(q[1]);aiAdd(d[q[0]],'user')}});progress.style.display='none';statusText.textContent='Review your brief';$('#aiText').disabled=true;});$('#aiChat').appendChild(details);
-    $('#aiText').value='';$('#aiText').placeholder='Consultation complete';$('#aiText').disabled=true;progress.style.display='none';actions.style.display='flex';statusText.textContent='Brief ready for WhatsApp';aiState.step=-1;
+    const details=document.createElement('button');details.className='aiAction';details.style.width='100%';details.style.marginTop='7px';details.textContent='Start again';details.addEventListener('click',aiRestart);$('#aiChat').appendChild(details);
+    $('#aiText').value='';$('#aiText').placeholder='Brief complete';$('#aiText').disabled=true;$('#aiText').style.display='block';progress.style.display='none';actions.style.display='flex';statusText.textContent='Brief ready for WhatsApp';aiState.step=-1;
   }
   function reply(){const input=$('#aiText');const raw=input.value.trim();if(!raw||input.disabled)return;
-    if(aiState.step>=0){const key=aiQuestions[aiState.step][0];aiState.data[key]=raw;aiAdd(raw,'user');aiState.step++;input.value='';if(aiState.step<aiQuestions.length){aiUpdateProgress();setTimeout(()=>aiAdd(aiQuestions[aiState.step][1]),120)}else{aiFinish()}return;}
+    if(aiState.step>=0){const q=aiQuestions[aiState.step];aiState.data[q.key]=raw;aiAdd(raw,'user');aiState.step++;input.value='';if(aiState.step<aiQuestions.length){aiUpdateProgress();setTimeout(aiAsk,100)}else{aiFinish()}return;}
     const v=raw.toLowerCase();
     if(v.includes('whatsapp')||v.includes('contact')||v.includes('talk')||v.includes('start')){const msg='Hello WingBait, I want to discuss a website. My requirement: '+raw;window.open('https://wa.me/919902807082?text='+encodeURIComponent(msg),'_blank','noopener');input.value='';panel.classList.remove('open');return;}
     let target='#offer';if(v.includes('work')||v.includes('example')||v.includes('sample')||v.includes('design'))target='#work';if(v.includes('process')||v.includes('how'))target='#process';if(v.includes('price')||v.includes('cost')||v.includes('99')||v.includes('49')||v.includes('2499')||v.includes('449'))target='#offer';if(v.includes('email'))target='#contact';aiAdd('I can help with that. I’ll take you to the relevant part of the WingBait website.');input.value='';panel.classList.remove('open');setTimeout(()=>document.querySelector(target)?.scrollIntoView({behavior:'smooth',block:'start'}),80);
